@@ -1,0 +1,11 @@
+/BATCH  
+/COM,ANSYS RELEASE Release 19.0      BUILD 19.0      UP20171214       15:26:45
+/input,menust,tmp,''
+/GRA,POWER
+/GST,ON
+/PLO,INFO,3
+/GRO,CURL,ON
+/CPLANE,1   
+/inp, 'C:/Users/KASH/AppData/Local/Temp/WB_DESKTOP-P2F9CPJ_KASH_10780_2/unsaved_project_files/dp0/APDL/ANSYS/workbench_main.inp'
+WPSTYLE,,,,,,,,0
+/REPLOT,RESIZE  

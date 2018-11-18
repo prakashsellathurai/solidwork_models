@@ -1,0 +1,20 @@
+# encoding: utf-8
+# Release 19.0
+SetScriptVersion(Version="19.0.136")
+ImportFile(FilePath="C:/Users/KASH/3D Objects/Piston.agdb")
+system1 = GetSystem(Name="Geometry")
+system1.Update(AllDependencies=True)
+template1 = GetTemplate(TemplateName="Mechanical APDL")
+geometryComponent1 = system1.GetComponent(Name="Geometry")
+componentTemplate1 = GetComponentTemplate(Name="ANSYSSetupCellTemplate")
+system2 = template1.CreateSystem(
+    DataTransferFrom=[Set(FromComponent=geometryComponent1, TransferName=None, ToComponentTemplate=componentTemplate1)],
+    RelativeTo=system1)
+setupComponent1 = system2.GetComponent(Name="Setup")
+setupComponent1.Refresh()
+setup1 = system2.GetContainer(ComponentName="Setup")
+setup1.Edit(
+    Interactive=True,
+    LoadInputFiles=True)
+setup1.Exit()
+Save(Overwrite=True)
